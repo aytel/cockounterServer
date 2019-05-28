@@ -12,7 +12,7 @@ class HttpServer {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            val ss = ServerSocket(8080)
+            val ss = ServerSocket(1337)
             while (true) {
                 val s = ss.accept()
                 System.err.println("Client accepted")

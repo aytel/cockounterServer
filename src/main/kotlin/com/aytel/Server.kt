@@ -9,18 +9,20 @@ import java.net.ServerSocket
 
 
 class HttpServer {
-    fun main() {
-        val ss = ServerSocket(8080)
-        while (true) {
-            val s = ss.accept()
-            System.err.println("Client accepted")
-            Thread(SocketProcessor(s)).start()
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            val ss = ServerSocket(8080)
+            while (true) {
+                val s = ss.accept()
+                System.err.println("Client accepted")
+                Thread(SocketProcessor(s)).start()
+            }
         }
     }
-
     private class SocketProcessor @Throws(Throwable::class)
     constructor(private val s: Socket) : Runnable {
-        private val `is`: InputStream = s.getInputStream()
+        private val inputStream: InputStream = s.getInputStream()
         private val os: OutputStream = s.getOutputStream()
 
         override fun run() {
@@ -54,7 +56,7 @@ class HttpServer {
 
         @Throws(Throwable::class)
         private fun readInputHeaders() {
-            val br = BufferedReader(InputStreamReader(`is`))
+            val br = BufferedReader(InputStreamReader(inputStream))
             while (true) {
                 val s = br.readLine()
                 if (s == null || s.trim { it <= ' ' }.isEmpty()) {

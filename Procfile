@@ -1,1 +1,1 @@
-java -cp . Server
+web: .\build\install\cockounterServer\bin\cockounterServer

@@ -1,1 +1,1 @@
-web: .\build\install\cockounterServer\bin\cockounterServer
+web: ./build/install/cockounterServer/bin/cockounterServer

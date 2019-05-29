@@ -6,12 +6,14 @@ import com.example.cockounter.classes.StateCaptureConverter
 import com.google.gson.JsonSyntaxException
 import io.ktor.application.Application
 import io.ktor.application.call
+import io.ktor.http.HttpStatusCode
 import io.ktor.response.respond
 import io.ktor.routing.get
 import io.ktor.routing.post
 import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import java.lang.Exception
 import java.util.*
 
 class HttpServer {
@@ -46,7 +48,13 @@ class HttpServer {
                     }
                     get(GET_GAME_SESSION) {
                         val uuid = UUID.fromString(call.parameters["uuid"])
-                        call.respond(StateCaptureConverter.gson.toJson(storage.findByUUID(uuid).state))
+                        System.err.println("uuid = $uuid")
+                        try {
+                            call.respond(StateCaptureConverter.gson.toJson(storage.findByUUID(uuid).state))
+                        } catch (e: Exception) {
+                            System.err.println("Not found")
+                            call.respond(HttpStatusCode.BadRequest)
+                        }
                     }
                     post(UPDATE_GAME_STATE) {
                         val uuid = UUID.fromString(call.parameters["uuid"])

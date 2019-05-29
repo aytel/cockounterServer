@@ -18,7 +18,7 @@ import java.util.*
 
 class HttpServer {
     companion object {
-        private const val CREATE_SESSION = "create/{capture}"
+        private const val CREATE_SESSION = "create"
         private const val UPDATE_GAME_STATE = "update_gs/{uuid}"
         private const val CONNECT_TO_SESSION = "connect/{uuid}"
         private const val GET_GAME_SESSION = "get/{uuid}"
@@ -30,10 +30,12 @@ class HttpServer {
             System.err.println("Started!")
             embeddedServer(Netty, System.getenv("PORT").toInt()) {
                 routing {
-                    get(CREATE_SESSION) {
+                    post(CREATE_SESSION) {
+                        val captureString = call.parameters["capture"]
+                        System.err.println("capture = $captureString")
                         try {
                             val capture: StateCapture = StateCaptureConverter.gson.fromJson(
-                                call.parameters["capture"],
+                                captureString,
                                 StateCapture::class.java
                             )
                             storage.add(capture)

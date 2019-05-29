@@ -14,7 +14,6 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import java.util.*
 
-
 class HttpServer {
     companion object {
         private const val CREATE_SESSION = "create/{capture}"
@@ -26,6 +25,7 @@ class HttpServer {
 
         @JvmStatic
         fun main(args: Array<String>) {
+            System.err.println("Started!")
             embeddedServer(Netty, System.getenv("PORT").toInt()) {
                 routing {
                     get(CREATE_SESSION) {

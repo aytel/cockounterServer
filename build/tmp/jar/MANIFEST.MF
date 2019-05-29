@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: com.aytel.HttpServer
+Main-Class: com.example.cockounter.HttpServer
 

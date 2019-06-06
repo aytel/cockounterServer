@@ -83,7 +83,7 @@ class HttpServer {
                             GameState::class.java
                         )
                         val version = state.version
-                        storage.update(version, uuid, state)
+                        call.respond(StateCaptureConverter.gson.toJson(storage.update(version, uuid, state).second))
                     }
                 }
             }.start(wait = true)

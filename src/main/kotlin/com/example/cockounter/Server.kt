@@ -46,8 +46,8 @@ class HttpServer {
                     }
                     get(CONNECT_TO_SESSION) {
                         val uuidString = call.parameters["uuid"]
-                        val uuid = UUID.fromString(uuidString)
                         System.err.println("uuid = $uuidString")
+                        val uuid = UUID.fromString(uuidString)
                         val capture = storage.findByUUID(uuid)
                         if (capture != null) {
                             call.respond(StateCaptureConverter.gson.toJson(capture))

@@ -15,7 +15,7 @@ import java.util.*
 
 @Entity
 data class StateCapture(
-    val id: Int,
+    @Indexed val id: Int,
     @Indexed val name: String,
     @Indexed val state: GameState,
     @Indexed val preset: Preset,

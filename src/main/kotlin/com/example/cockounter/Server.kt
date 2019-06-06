@@ -21,7 +21,7 @@ import java.util.*
 class HttpServer {
     companion object {
         private const val CREATE_SESSION = "create"
-        private const val UPDATE_GAME_STATE = "update_gs/{uuid}"
+        private const val UPDATE_GAME_STATE = "update_gs"
         private const val CONNECT_TO_SESSION = "connect/{uuid}"
         private const val GET_GAME_SESSION = "get/{uuid}"
 
@@ -42,7 +42,7 @@ class HttpServer {
                                 captureString,
                                 StateCapture::class.java
                             )
-                            System.err.println("built");
+                            System.err.println("built")
                             storage.add(capture)
                             call.respond("true")
                         } catch (e: JsonSyntaxException) {
@@ -76,12 +76,13 @@ class HttpServer {
                         }
                     }
                     post(UPDATE_GAME_STATE) {
-                        val uuid = UUID.fromString(call.parameters["uuid"])
-                        val version = call.parameters["version"]!!.toInt()
+                        val parameters = call.receiveParameters()
+                        val uuid = UUID.fromString(parameters["uuid"])
                         val state = StateCaptureConverter.gson.fromJson(
-                            call.parameters["state"],
+                            parameters["state"],
                             GameState::class.java
                         )
+                        val version = state.version
                         storage.update(version, uuid, state)
                     }
                 }

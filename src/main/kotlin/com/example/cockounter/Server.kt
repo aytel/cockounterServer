@@ -7,6 +7,7 @@ import com.google.gson.JsonSyntaxException
 import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.http.HttpStatusCode
+import io.ktor.request.receiveParameters
 import io.ktor.response.respond
 import io.ktor.routing.get
 import io.ktor.routing.post
@@ -32,7 +33,8 @@ class HttpServer {
             embeddedServer(Netty, System.getenv("PORT").toInt()) {
                 routing {
                     post(CREATE_SESSION) {
-                        val captureString = call.parameters["capture"]
+                        val parameters = call.receiveParameters()
+                        val captureString = parameters["capture"]
                         System.err.println("capture = $captureString")
                         try {
                             val capture: StateCapture = StateCaptureConverter.gson.fromJson(

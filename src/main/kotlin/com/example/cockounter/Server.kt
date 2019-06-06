@@ -36,7 +36,8 @@ class HttpServer {
                         val parameters = call.receiveParameters()
                         val captureString = parameters["capture"]
                         System.err.println("capture = $captureString")
-                        try {
+                        call.respond("false")
+                        /*try {
                             val capture: StateCapture = StateCaptureConverter.gson.fromJson(
                                 captureString,
                                 StateCapture::class.java
@@ -45,7 +46,7 @@ class HttpServer {
                             call.respond("true")
                         } catch (e: JsonSyntaxException) {
                             call.respond("false")
-                        }
+                        }*/
                     }
                     get(CONNECT_TO_SESSION) {
                         val uuidString = call.parameters["uuid"]

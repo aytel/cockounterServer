@@ -14,6 +14,7 @@ import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import java.lang.Exception
+import java.lang.IllegalArgumentException
 import java.util.*
 
 class HttpServer {
@@ -47,13 +48,18 @@ class HttpServer {
                     get(CONNECT_TO_SESSION) {
                         val uuidString = call.parameters["uuid"]
                         System.err.println("uuid = $uuidString")
-                        val uuid = UUID.fromString(uuidString)
-                        val capture = storage.findByUUID(uuid)
-                        if (capture != null) {
-                            call.respond(StateCaptureConverter.gson.toJson(capture))
-                        } else {
+                        try {
+                            val uuid = UUID.fromString(uuidString)
+                            val capture = storage.findByUUID(uuid)
+                            if (capture != null) {
+                                call.respond(StateCaptureConverter.gson.toJson(capture))
+                            } else {
+                                call.respond("false")
+                            }
+                        } catch (e: IllegalArgumentException) {
                             call.respond("false")
                         }
+
                     }
                     get(GET_GAME_SESSION) {
                         val uuid = UUID.fromString(call.parameters["uuid"])

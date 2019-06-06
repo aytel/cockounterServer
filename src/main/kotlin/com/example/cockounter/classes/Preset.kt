@@ -9,6 +9,7 @@ import java.lang.reflect.Type
 //@Entity
 //@TypeConverters(PresetConverter::class)
 data class PresetInfo(
+    val id: Int,
     val name: String,
     val description: String,
     val preset: Preset

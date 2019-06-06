@@ -42,6 +42,7 @@ class HttpServer {
                                 captureString,
                                 StateCapture::class.java
                             )
+                            System.err.println("built");
                             storage.add(capture)
                             call.respond("true")
                         } catch (e: JsonSyntaxException) {

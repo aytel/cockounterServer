@@ -46,13 +46,18 @@ class HttpServer {
                     }
                     get(CONNECT_TO_SESSION) {
                         val uuid = UUID.fromString(call.parameters["uuid"])
-                        call.respond(StateCaptureConverter.gson.toJson(storage.findByUUID(uuid)))
+                        val capture = storage.findByUUID(uuid)
+                        if (capture != null) {
+                            call.respond(StateCaptureConverter.gson.toJson(capture))
+                        } else {
+                            call.respond("false")
+                        }
                     }
                     get(GET_GAME_SESSION) {
                         val uuid = UUID.fromString(call.parameters["uuid"])
                         System.err.println("uuid = $uuid")
                         try {
-                            call.respond(StateCaptureConverter.gson.toJson(storage.findByUUID(uuid).state))
+                            call.respond(StateCaptureConverter.gson.toJson(storage.findByUUID(uuid)!!.state))
                         } catch (e: Exception) {
                             System.err.println("Not found")
                             call.respond(HttpStatusCode.BadRequest)

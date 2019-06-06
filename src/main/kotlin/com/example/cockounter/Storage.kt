@@ -28,7 +28,7 @@ class Storage() {
         return query
     }
 
-    fun findByUUID(uuid: UUID): StateCapture = find(uuid).get()
+    fun findByUUID(uuid: UUID): StateCapture? = find(uuid).get()
 
     fun update(version: Int, uuid: UUID, state: GameState): Pair<Boolean, GameState> {
         val capture = find(uuid).get()

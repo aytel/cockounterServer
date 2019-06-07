@@ -89,22 +89,38 @@ sealed class GameParameter : Serializable {
     abstract fun valueString(): String
 }
 
-data class IntegerGameParameter(override val name: String, override val visibleName: String, val value: Int) :
+data class IntegerGameParameter(
+    override val name: String = "",
+    override val visibleName: String = "",
+    val value: Int = 0
+) :
     GameParameter() {
     override fun valueString() = "Integer: $value"
 }
 
-data class StringGameParameter(override val name: String, override val visibleName: String, val value: String) :
+data class StringGameParameter(
+    override val name: String = "",
+    override val visibleName: String = "",
+    val value: String = ""
+) :
     GameParameter() {
     override fun valueString() = "String: $value"
 }
 
-data class DoubleGameParameter(override val name: String, override val visibleName: String, val value: Double) :
+data class DoubleGameParameter(
+    override val name: String = "",
+    override val visibleName: String = "",
+    val value: Double = 0.0
+) :
     GameParameter() {
     override fun valueString() = "Double: $value"
 }
 
-data class BooleanGameParameter(override val name: String, override val visibleName: String, val value: Boolean) :
+data class BooleanGameParameter(
+    override val name: String = "",
+    override val visibleName: String = "",
+    val value: Boolean = false
+) :
     GameParameter() {
     override fun valueString() = "Boolean: $value"
 }

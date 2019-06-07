@@ -106,10 +106,10 @@ sealed class Parameter : Serializable {
 }
 
 data class IntegerParameter(
-    override val name: String,
-    override val visibleName: String,
-    val initialValue: Int,
-    override val actionsStubs: List<PresetScript>
+    override val name: String = "",
+    override val visibleName: String = "",
+    val initialValue: Int = 0,
+    override val actionsStubs: List<PresetScript> = emptyList()
 ) :
     Parameter(), Serializable {
     override fun typeString(): String = typeName
@@ -122,10 +122,10 @@ data class IntegerParameter(
 }
 
 data class DoubleParameter(
-    override val name: String,
-    override val visibleName: String,
-    val initialValue: Double,
-    override val actionsStubs: List<PresetScript>
+    override val name: String = "",
+    override val visibleName: String = "",
+    val initialValue: Double = 0.0,
+    override val actionsStubs: List<PresetScript> = emptyList()
 ) :
     Parameter(), Serializable {
     override fun typeString(): String = typeName
@@ -138,10 +138,10 @@ data class DoubleParameter(
 }
 
 data class StringParameter(
-    override val name: String,
-    override val visibleName: String,
-    val initialValue: String,
-    override val actionsStubs: List<PresetScript>
+    override val name: String = "",
+    override val visibleName: String = "",
+    val initialValue: String = "",
+    override val actionsStubs: List<PresetScript> = emptyList()
 ) :
     Parameter(), Serializable {
     override fun typeString(): String = typeName
@@ -154,10 +154,10 @@ data class StringParameter(
 }
 
 data class BooleanParameter(
-    override val name: String,
-    override val visibleName: String,
-    val initialValue: Boolean,
-    override val actionsStubs: List<PresetScript>
+    override val name: String = "",
+    override val visibleName: String = "",
+    val initialValue: Boolean = false,
+    override val actionsStubs: List<PresetScript> = emptyList()
 ) :
     Parameter(), Serializable {
     override fun typeString(): String = typeName
@@ -190,10 +190,10 @@ sealed class ParameterPointer : Serializable {
 }
 
 data class PresetScript(
-    val visibleName: String,
-    val functionName: String?,
-    val script: String,
-    val context: ScriptContextDescription
+    val visibleName: String = "",
+    val functionName: String? = null,
+    val script: String = "",
+    val context: ScriptContextDescription = ScriptContextDescription.NONE
 ) : Serializable {
     companion object
 }

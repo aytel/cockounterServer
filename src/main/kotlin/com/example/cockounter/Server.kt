@@ -31,6 +31,7 @@ class HttpServer {
             embeddedServer(Netty, System.getenv("PORT").toInt()) {
                 routing {
                     post(CREATE_SESSION) {
+                        System.err.printf("referrer = %s\n", call.request.headers["Referrer"])
                         val parameters = call.receiveParameters()
                         val captureString = parameters["capture"]
                         System.err.println("capture = $captureString")

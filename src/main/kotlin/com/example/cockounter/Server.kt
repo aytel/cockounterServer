@@ -42,8 +42,11 @@ class HttpServer {
                             )
                             System.err.println("built")
                             storage.add(capture)
+                            assert(storage.findByUUID(capture.uuid) != null)
+                            System.err.println("saved")
                             call.respond("true")
                         } catch (e: JsonSyntaxException) {
+                            e.printStackTrace(System.err)
                             call.respond("false")
                         }
                     }

@@ -41,6 +41,8 @@ class Storage {
     }
 
     fun add(capture: StateCapture) {
+        System.err.println("trying to save")
         datastore.save(capture)
+        System.err.println("saved")
     }
 }

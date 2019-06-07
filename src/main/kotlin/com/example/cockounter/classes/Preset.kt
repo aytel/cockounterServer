@@ -21,10 +21,10 @@ data class PresetInfo(
 ) : Serializable
 
 data class Preset(
-    val globalParameters: Map<String, Parameter>,
-    val roles: Map<String, Role>,
-    val libraries: List<Library>,
-    val actionsStubs: List<PresetScript>
+    val globalParameters: Map<String, Parameter> = emptyMap(),
+    val roles: Map<String, Role> = emptyMap(),
+    val libraries: List<Library> = emptyList(),
+    val actionsStubs: List<PresetScript> = emptyList()
 ) : Serializable {
     val actionButtons: List<ActionButtonModel>
         get() = buildActionButtons()
@@ -88,10 +88,10 @@ class PresetConverter {
 */
 
 data class Role(
-    val name: String,
-    val sharedParameters: Map<String, Parameter>,
-    val privateParameters: Map<String, Parameter>,
-    val actionsStubs: List<PresetScript>
+    val name: String = "",
+    val sharedParameters: Map<String, Parameter> = emptyMap(),
+    val privateParameters: Map<String, Parameter> = emptyMap(),
+    val actionsStubs: List<PresetScript> = emptyList()
 ) : Serializable {
     companion object
 }

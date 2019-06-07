@@ -15,18 +15,18 @@ import java.util.*
 
 @Entity
 data class StateCapture(
-    val id: Int,
-    val name: String,
-    val state: GameState,
-    val preset: Preset,
-    val players: List<PlayerDescription>,
-    val date: Date,
-    @Id val uuid: UUID
+    val id: Int = 0,
+    val name: String = "",
+    val state: GameState = GameState(),
+    val preset: Preset = Preset(),
+    val players: List<PlayerDescription> = emptyList(),
+    val date: Date? = null,
+    @Id val uuid: UUID = UUID.randomUUID()
 )
 
 data class GameState(
-    val globalParameters: Map<String, GameParameter>,
-    val roles: Map<String, GameRole>,
+    val globalParameters: Map<String, GameParameter> = emptyMap(),
+    val roles: Map<String, GameRole> = emptyMap(),
     val version: Int = 0
 ) :
     Serializable {
@@ -69,14 +69,17 @@ class StateCaptureConverter {
 val dummyState = GameState(immutableMapOf(), immutableMapOf())
 
 data class GameRole(
-    val name: String,
-    val sharedParameters: Map<String, GameParameter>,
-    val players: Map<String, Player>
+    val name: String = "",
+    val sharedParameters: Map<String, GameParameter> = emptyMap(),
+    val players: Map<String, Player> = emptyMap()
 ) : Serializable {
     companion object
 }
 
-data class Player(val name: String, val privateParameters: Map<String, GameParameter>) : Serializable {
+data class Player(
+    val name: String = "",
+    val privateParameters: Map<String, GameParameter> = emptyMap()
+) : Serializable {
     companion object
 }
 
@@ -106,11 +109,11 @@ data class BooleanGameParameter(override val name: String, override val visibleN
     override fun valueString() = "Boolean: $value"
 }
 
-operator fun GameState.get(role: String) = roles.getValue(role)
+operator fun GameState.get(role: String) = roles!!.getValue(role)
 operator fun GameState.get(description: PlayerDescription) = get(description.role)[description.name]
 operator fun GameState.get(gameParameterPointer: GameParameterPointer) = when (gameParameterPointer) {
-    is GameParameterPointer.Global -> globalParameters[gameParameterPointer.name]!!
-    is GameParameterPointer.Shared -> roles[gameParameterPointer.role]!!.sharedParameters[gameParameterPointer.name]!!
+    is GameParameterPointer.Global -> this.globalParameters!![gameParameterPointer.name]!!
+    is GameParameterPointer.Shared -> roles!![gameParameterPointer.role]!!.sharedParameters[gameParameterPointer.name]!!
     is GameParameterPointer.Private -> get(gameParameterPointer.player).privateParameters[gameParameterPointer.name]!!
 }
 
@@ -139,7 +142,7 @@ operator fun GameState.set(gameParameterPointer: GameParameterPointer, parameter
 
 operator fun GameRole.get(player: String) = players.getValue(player)
 
-data class PlayerDescription(val name: String, val role: String)
+data class PlayerDescription(val name: String = "", val role: String = "")
 
 sealed class GameParameterPointer {
     data class Global(val name: String) : GameParameterPointer()

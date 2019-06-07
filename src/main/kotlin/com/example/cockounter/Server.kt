@@ -34,7 +34,6 @@ class HttpServer {
                         val parameters = call.receiveParameters()
                         val captureString = parameters["capture"]
                         System.err.println("capture = $captureString")
-                        //call.respond("false")
                         try {
                             val capture: StateCapture = StateCaptureConverter.gson.fromJson(
                                 captureString,
@@ -45,7 +44,7 @@ class HttpServer {
                             assert(storage.findByUUID(capture.uuid) != null)
                             System.err.println("saved")
                             call.respond("true")
-                        } catch (e: JsonSyntaxException) {
+                        } catch (e: Exception) {
                             e.printStackTrace(System.err)
                             call.respond("false")
                         }

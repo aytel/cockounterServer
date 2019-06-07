@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17ce15ab-8903-4498-82ca-d56790a8e328" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core/Preset.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core/Preset.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core/State.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core/State.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -56,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="44" column="55" lean-forward="true" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
+            <state relative-caret-position="266">
+              <caret line="87" column="86" lean-forward="true" selection-start-line="87" selection-start-column="86" selection-end-line="87" selection-end-column="86" />
               <folding>
                 <element signature="e#32#581#0" expanded="true" />
               </folding>
@@ -65,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+            <state relative-caret-position="193">
+              <caret line="47" column="57" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
               <folding>
                 <element signature="e#32#410#0" expanded="true" />
               </folding>
@@ -89,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core/Preset.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="308" lean-forward="true" selection-start-line="308" selection-end-line="308" />
+            <state relative-caret-position="291">
+              <caret line="293" column="42" lean-forward="true" selection-start-line="293" selection-start-column="42" selection-end-line="293" selection-end-column="42" />
               <folding>
                 <element signature="e#99#280#0" expanded="true" />
               </folding>
@@ -164,11 +163,11 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/Preset.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/State.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/example/cockounter/StorageTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core/State.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core/Preset.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt" />
       </list>
     </option>
   </component>
@@ -263,7 +262,7 @@
     <property name="add_unversioned_files" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559929498722" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559936848148" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core" />
@@ -376,21 +375,7 @@
       <workItem from="1559469319406" duration="716000" />
       <workItem from="1559562588472" duration="758000" />
       <workItem from="1559679481048" duration="1021000" />
-      <workItem from="1559844284393" duration="15791000" />
-    </task>
-    <task id="LOCAL-00019" summary="Deploy">
-      <created>1559844550820</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1559844550820</updated>
-    </task>
-    <task id="LOCAL-00020" summary="uuidString">
-      <created>1559844774807</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1559844774807</updated>
+      <workItem from="1559844284393" duration="17307000" />
     </task>
     <task id="LOCAL-00021" summary="Deploy">
       <created>1559844786590</created>
@@ -721,7 +706,21 @@
       <option name="project" value="LOCAL" />
       <updated>1559929032465</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Deploy">
+      <created>1559929522241</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1559929522241</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Deploy">
+      <created>1559929544125</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1559929544125</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -757,7 +756,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37558000" />
+    <option name="totallyTimeSpent" value="39074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -938,32 +937,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
-          <folding>
-            <element signature="e#32#410#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/example/cockounter/StorageTest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding>
             <element signature="e#32#184#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="44" column="55" lean-forward="true" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
-          <folding>
-            <element signature="e#32#581#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -980,10 +959,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core/Preset.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="308" lean-forward="true" selection-start-line="308" selection-end-line="308" />
+        <state relative-caret-position="291">
+          <caret line="293" column="42" lean-forward="true" selection-start-line="293" selection-start-column="42" selection-end-line="293" selection-end-column="42" />
           <folding>
             <element signature="e#99#280#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="87" column="86" lean-forward="true" selection-start-line="87" selection-start-column="86" selection-end-line="87" selection-end-column="86" />
+          <folding>
+            <element signature="e#32#581#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="47" column="57" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+          <folding>
+            <element signature="e#32#410#0" expanded="true" />
           </folding>
         </state>
       </provider>

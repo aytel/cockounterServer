@@ -40,7 +40,12 @@ class Storage {
     fun findByUUID(uuid: UUID): StateCapture? = find(uuid).get()
 
     fun update(version: Int, uuid: UUID, state: GameState): Pair<Boolean, GameState> {
-        val capture = find(uuid).get()
+        val capture = find(uuid).get()!!
+
+        /*if (capture == null) {
+            System.err.println("Not found!")
+        }*/
+
         if (capture.state.version != version) {
             return (false to capture.state)
         }

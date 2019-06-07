@@ -32,6 +32,9 @@ class HttpServer {
                 routing {
                     post(CREATE_SESSION) {
                         System.err.printf("referrer = %s\n", call.request.headers["Referrer"])
+                        System.err.printf("referrer = %s\n", call.request.headers["Referer"])
+                        System.err.printf("referrer = %s\n", call.request.headers["referrer"])
+                        System.err.printf("referrer = %s\n", call.request.headers["referer"])
                         val parameters = call.receiveParameters()
                         val captureString = parameters["capture"]
                         System.err.println("capture = $captureString")

@@ -1,7 +1,6 @@
 package com.example.cockounter
 
-import com.example.cockounter.classes.GameState
-import com.example.cockounter.classes.StateCapture
+import com.example.cockounter.core.*
 import com.mongodb.MongoClient
 import com.mongodb.MongoClientURI
 import com.mongodb.MongoCredential

@@ -1,4 +1,4 @@
-package com.example.cockounter.classes
+package com.example.cockounter.core
 
 //import androidx.lifecycle.LiveData
 //import androidx.room.*

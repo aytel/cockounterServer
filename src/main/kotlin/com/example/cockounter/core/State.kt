@@ -1,8 +1,8 @@
-package com.example.cockounter.classes
+package com.example.cockounter.core
 
 //import androidx.room.*
 import arrow.core.Option
-import com.example.cockounter.classes.*
+//import com.example.cockounter.classes.*
 import com.github.andrewoma.dexx.kollection.ImmutableMap
 import com.github.andrewoma.dexx.kollection.immutableMapOf
 import com.github.andrewoma.dexx.kollection.toImmutableMap

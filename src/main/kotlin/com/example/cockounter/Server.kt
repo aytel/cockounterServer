@@ -1,8 +1,6 @@
 package com.example.cockounter
 
-import com.example.cockounter.classes.GameState
-import com.example.cockounter.classes.StateCapture
-import com.example.cockounter.classes.StateCaptureConverter
+import com.example.cockounter.core.*
 import com.google.gson.JsonSyntaxException
 import io.ktor.application.Application
 import io.ktor.application.call

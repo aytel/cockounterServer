@@ -4,6 +4,7 @@ import com.example.cockounter.classes.GameState
 import com.example.cockounter.classes.StateCapture
 import com.mongodb.MongoClient
 import com.mongodb.MongoClientURI
+import com.mongodb.MongoCredential
 import com.mongodb.QueryBuilder
 import xyz.morphia.Datastore
 import xyz.morphia.Morphia
@@ -14,13 +15,18 @@ import xyz.morphia.query.Query
 import java.util.*
 
 class Storage {
-    val URI = "mongodb://heroku_57qtj3fn:9pfe4cdjuchb46dlunq2g6p2o3@ds235775.mlab.com:35775/heroku_57qtj3fn"
-    val mongoClientURI = MongoClientURI(URI)
-    val mongoClient = MongoClient(mongoClientURI)
+    private val URI = "mongodb://heroku_57qtj3fn:9pfe4cdjuchb46dlunq2g6p2o3@ds235775.mlab.com:35775/heroku_57qtj3fn"
+    /*private val credentials = listOf<MongoCredential>(MongoCredential.createCredential("admin",
+        "commonStorage",
+        "9pfe4cdjuchb46dlunq2g6p2o3@ds235775".toCharArray()))*/
+    private val mongoClientURI = MongoClientURI(URI)
+    private val mongoClient = MongoClient(mongoClientURI)
     private val morphia = Morphia().mapPackage("com.example.cockounter")
-    private val datastore = morphia.createDatastore(mongoClient, "commonStorage")
+    private val datastore = morphia.createDatastore(mongoClient, "heroku_57qtj3fn")
+    //private val database = mongoClient.getDatabase(mongoClientURI.database)
 
     init {
+        mongoClientURI.credentials
         datastore.ensureIndexes()
     }
 

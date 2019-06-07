@@ -77,6 +77,7 @@ class HttpServer {
                     }
                     post(UPDATE_GAME_STATE) {
                         val parameters = call.receiveParameters()
+                        System.err.printf("uuid = %s\n, state = %s\n", parameters["uuid"], parameters["state"])
                         val uuid = UUID.fromString(parameters["uuid"])
                         val state = StateCaptureConverter.gson.fromJson(
                             parameters["state"],

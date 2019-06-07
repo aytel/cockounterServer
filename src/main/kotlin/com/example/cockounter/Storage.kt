@@ -46,8 +46,7 @@ class Storage {
             return (false to capture.state)
         }
         val newState = GameState(capture.state.globalParameters, capture.state.roles, version + 1)
-        datastore.createUpdateOperations(StateCapture::class.java).set("state", newState)
-        //datastore.createUpdateOperations(StateCapture::class.java).set("version", version + 1)
+        datastore.update(capture, datastore.createUpdateOperations(StateCapture::class.java).set("state", newState))
         return (true to state)
     }
 

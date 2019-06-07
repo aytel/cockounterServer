@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="48" column="88" selection-start-line="48" selection-start-column="88" selection-end-line="48" selection-end-column="88" />
+            <state relative-caret-position="215">
+              <caret line="48" column="115" selection-start-line="48" selection-start-column="115" selection-end-line="48" selection-end-column="115" />
               <folding>
                 <element signature="e#32#410#0" expanded="true" />
               </folding>
@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/example/cockounter/StorageTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="193">
+              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding>
                 <element signature="e#32#183#0" expanded="true" />
               </folding>
@@ -255,7 +255,7 @@
     <property name="add_unversioned_files" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559924191273" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559924778081" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/kotlin" />
@@ -368,21 +368,7 @@
       <workItem from="1559469319406" duration="716000" />
       <workItem from="1559562588472" duration="758000" />
       <workItem from="1559679481048" duration="1021000" />
-      <workItem from="1559844284393" duration="11590000" />
-    </task>
-    <task id="LOCAL-00001" summary="Deploy">
-      <created>1559030251811</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1559030251811</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Deploy">
-      <created>1559030660360</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1559030660360</updated>
+      <workItem from="1559844284393" duration="12005000" />
     </task>
     <task id="LOCAL-00003" summary="Deploy">
       <created>1559030782926</created>
@@ -713,16 +699,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559923644295</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="fix update">
+      <created>1559924225809</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1559924225813</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Deploy">
+      <created>1559924238697</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1559924238697</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StorageTest - 2019.06.07 at 19h 56m 25s.xml">
-      <configuration name="StorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StorageTest - 2019.06.07 at 19h 56m 55s.xml">
-      <configuration name="StorageTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StorageTest - 2019.06.07 at 19h 57m 20s.xml">
       <configuration name="StorageTest" configurationId="JUnit" />
     </history-entry>
@@ -747,9 +741,15 @@
     <history-entry file="StorageTest - 2019.06.07 at 21h 16m 27s.xml">
       <configuration name="StorageTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StorageTest - 2019.06.07 at 21h 16m 56s.xml">
+      <configuration name="StorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StorageTest - 2019.06.07 at 21h 21m 54s.xml">
+      <configuration name="StorageTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33357000" />
+    <option name="totallyTimeSpent" value="33772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -765,7 +765,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32615384" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42703533" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42549923" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -837,6 +837,7 @@
     <MESSAGE value="add &quot;false&quot; to connect" />
     <MESSAGE value="uuidString" />
     <MESSAGE value="added default constructors" />
+    <MESSAGE value="fix update" />
     <MESSAGE value="Deploy" />
     <option name="LAST_COMMIT_MESSAGE" value="Deploy" />
   </component>
@@ -945,16 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/example/cockounter/StorageTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding>
-            <element signature="e#32#183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/State.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2176">
@@ -962,10 +953,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/example/cockounter/StorageTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#32#183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="48" column="88" selection-start-line="48" selection-start-column="88" selection-end-line="48" selection-end-column="88" />
+        <state relative-caret-position="215">
+          <caret line="48" column="115" selection-start-line="48" selection-start-column="115" selection-end-line="48" selection-end-column="115" />
           <folding>
             <element signature="e#32#410#0" expanded="true" />
           </folding>

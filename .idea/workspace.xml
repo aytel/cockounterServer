@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17ce15ab-8903-4498-82ca-d56790a8e328" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -52,19 +52,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="85" column="80" lean-forward="true" selection-start-line="85" selection-start-column="80" selection-end-line="85" selection-end-column="80" />
+            <state relative-caret-position="334">
+              <caret line="89" column="57" selection-start-line="89" selection-start-column="57" selection-end-line="89" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
+            <state relative-caret-position="57">
               <caret line="48" column="115" selection-start-line="48" selection-start-column="115" selection-end-line="48" selection-end-column="115" />
               <folding>
                 <element signature="e#32#410#0" expanded="true" />
@@ -100,7 +100,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/State.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2176">
+            <state relative-caret-position="-170">
               <caret line="144" column="73" selection-start-line="144" selection-start-column="73" selection-end-line="144" selection-end-column="73" />
             </state>
           </provider>
@@ -146,12 +146,12 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/aytel/Server.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/StateCaptureAdapter.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/Preset.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/State.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/example/cockounter/StorageTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt" />
       </list>
     </option>
   </component>
@@ -255,7 +255,7 @@
     <property name="add_unversioned_files" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559924778081" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559925026997" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/kotlin" />
@@ -287,7 +287,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StorageTest">
+  <component name="RunManager" selected="Heroku Deployment.Deployment: cockounterServer">
     <configuration name="cockounterServer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -368,21 +368,7 @@
       <workItem from="1559469319406" duration="716000" />
       <workItem from="1559562588472" duration="758000" />
       <workItem from="1559679481048" duration="1021000" />
-      <workItem from="1559844284393" duration="12005000" />
-    </task>
-    <task id="LOCAL-00003" summary="Deploy">
-      <created>1559030782926</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1559030782926</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Deploy">
-      <created>1559031199706</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1559031199706</updated>
+      <workItem from="1559844284393" duration="12378000" />
     </task>
     <task id="LOCAL-00005" summary="Deploy">
       <created>1559031652102</created>
@@ -713,16 +699,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559924238697</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Deploy">
+      <created>1559924793368</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1559924793368</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Deploy">
+      <created>1559924808542</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1559924808542</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StorageTest - 2019.06.07 at 19h 57m 20s.xml">
-      <configuration name="StorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StorageTest - 2019.06.07 at 19h 57m 58s.xml">
-      <configuration name="StorageTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StorageTest - 2019.06.07 at 19h 58m 33s.xml">
       <configuration name="StorageTest" configurationId="JUnit" />
     </history-entry>
@@ -747,9 +741,15 @@
     <history-entry file="StorageTest - 2019.06.07 at 21h 21m 54s.xml">
       <configuration name="StorageTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StorageTest - 2019.06.07 at 21h 23m 39s.xml">
+      <configuration name="StorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StorageTest - 2019.06.07 at 21h 26m 42s.xml">
+      <configuration name="StorageTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33772000" />
+    <option name="totallyTimeSpent" value="34145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -765,13 +765,13 @@
       <window_info anchor="bottom" id="Messages" weight="0.32615384" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42549923" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42549923" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32718894" />
-      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.27035332" />
+      <window_info active="true" anchor="bottom" id="Application Servers" order="8" visible="true" weight="0.27035332" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32872504" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
@@ -939,20 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="85" column="80" lean-forward="true" selection-start-line="85" selection-start-column="80" selection-end-line="85" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/State.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="144" column="73" selection-start-line="144" selection-start-column="73" selection-end-line="144" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/example/cockounter/StorageTest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -965,11 +951,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
+        <state relative-caret-position="57">
           <caret line="48" column="115" selection-start-line="48" selection-start-column="115" selection-end-line="48" selection-end-column="115" />
           <folding>
             <element signature="e#32#410#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/State.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="144" column="73" selection-start-line="144" selection-start-column="73" selection-end-line="144" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="89" column="57" selection-start-line="89" selection-start-column="57" selection-end-line="89" selection-end-column="57" />
         </state>
       </provider>
     </entry>

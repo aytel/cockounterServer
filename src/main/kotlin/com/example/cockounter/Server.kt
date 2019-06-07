@@ -76,15 +76,19 @@ class HttpServer {
                         }
                     }
                     post(UPDATE_GAME_STATE) {
-                        val parameters = call.receiveParameters()
-                        System.err.printf("uuid = %s\n, state = %s\n", parameters["uuid"], parameters["state"])
-                        val uuid = UUID.fromString(parameters["uuid"])
-                        val state = StateCaptureConverter.gson.fromJson(
-                            parameters["state"],
-                            GameState::class.java
-                        )
-                        val version = state.version
-                        call.respond(StateCaptureConverter.gson.toJson(storage.update(version, uuid, state).second))
+                        try {
+                            val parameters = call.receiveParameters()
+                            System.err.printf("uuid = %s\n, state = %s\n", parameters["uuid"], parameters["state"])
+                            val uuid = UUID.fromString(parameters["uuid"])
+                            val state = StateCaptureConverter.gson.fromJson(
+                                parameters["state"],
+                                GameState::class.java
+                            )
+                            val version = state.version
+                            call.respond(StateCaptureConverter.gson.toJson(storage.update(version, uuid, state).second))
+                        } catch (e: Exception) {
+                            e.printStackTrace(System.err)
+                        }
                     }
                 }
             }.start(wait = true)

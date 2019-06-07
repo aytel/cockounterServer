@@ -12,7 +12,7 @@ import xyz.morphia.annotations.Indexed
 import xyz.morphia.query.Query
 import java.util.*
 
-class Storage() {
+class Storage {
     private val morphia = Morphia().mapPackage("com.example.cockounter")
     private val datastore = morphia.createDatastore(MongoClient(), "commonStorage")
 

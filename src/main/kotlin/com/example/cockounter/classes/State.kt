@@ -15,12 +15,12 @@ import java.util.*
 
 @Entity
 data class StateCapture(
-    @Indexed val id: Int,
-    @Indexed val name: String,
-    @Indexed val state: GameState,
-    @Indexed val preset: Preset,
-    @Indexed val players: List<PlayerDescription>,
-    @Indexed val date: Date,
+    val id: Int,
+    val name: String,
+    val state: GameState,
+    val preset: Preset,
+    val players: List<PlayerDescription>,
+    val date: Date,
     @Id val uuid: UUID
 )
 

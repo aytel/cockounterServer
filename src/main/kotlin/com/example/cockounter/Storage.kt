@@ -42,11 +42,12 @@ class Storage {
 
     fun update(version: Int, uuid: UUID, state: GameState): Pair<Boolean, GameState> {
         val capture = find(uuid).get()
-        if (capture.state!!.version != version) {
+        if (capture.state.version != version) {
             return (false to capture.state)
         }
-        datastore.createUpdateOperations(StateCapture::class.java).set("state", state)
-        datastore.createUpdateOperations(StateCapture::class.java).set("version", version + 1)
+        val newState = GameState(capture.state.globalParameters, capture.state.roles, version + 1)
+        datastore.createUpdateOperations(StateCapture::class.java).set("state", newState)
+        //datastore.createUpdateOperations(StateCapture::class.java).set("version", version + 1)
         return (true to state)
     }
 

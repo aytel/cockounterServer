@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+            <state relative-caret-position="311">
+              <caret line="85" column="80" lean-forward="true" selection-start-line="85" selection-start-column="80" selection-end-line="85" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="24" column="81" selection-start-line="24" selection-start-column="81" selection-end-line="24" selection-end-column="81" />
+            <state relative-caret-position="91">
+              <caret line="48" column="88" selection-start-line="48" selection-start-column="88" selection-end-line="48" selection-end-column="88" />
               <folding>
                 <element signature="e#32#410#0" expanded="true" />
               </folding>
@@ -74,28 +74,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-core/3.10.1/482d329c72d04aa48b0c1e774623594ab8b31ff6/mongodb-driver-core-3.10.1-sources.jar!/com/mongodb/MongoCredential.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="167" column="34" selection-start-line="167" selection-start-column="34" selection-end-line="167" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver/3.10.1/37f55d5ca021d347f431e617f4de61bc7defc291/mongodb-driver-3.10.1-sources.jar!/com/mongodb/MongoClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="432" column="27" selection-start-line="432" selection-start-column="27" selection-end-line="432" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/example/cockounter/StorageTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="316">
+              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding>
                 <element signature="e#32#183#0" expanded="true" />
               </folding>
@@ -118,7 +100,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/State.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-378">
+            <state relative-caret-position="2176">
               <caret line="144" column="73" selection-start-line="144" selection-start-column="73" selection-end-line="144" selection-end-column="73" />
             </state>
           </provider>
@@ -273,7 +255,7 @@
     <property name="add_unversioned_files" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559923567167" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559924191273" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/kotlin" />
@@ -386,7 +368,7 @@
       <workItem from="1559469319406" duration="716000" />
       <workItem from="1559562588472" duration="758000" />
       <workItem from="1559679481048" duration="1021000" />
-      <workItem from="1559844284393" duration="10959000" />
+      <workItem from="1559844284393" duration="11590000" />
     </task>
     <task id="LOCAL-00001" summary="Deploy">
       <created>1559030251811</created>
@@ -717,19 +699,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559920974795</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Deploy">
+      <created>1559923596474</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1559923596474</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Deploy">
+      <created>1559923644295</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1559923644295</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StorageTest - 2019.06.07 at 19h 50m 31s.xml">
-      <configuration name="StorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StorageTest - 2019.06.07 at 19h 52m 30s.xml">
-      <configuration name="StorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StorageTest - 2019.06.07 at 19h 55m 05s.xml">
-      <configuration name="StorageTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StorageTest - 2019.06.07 at 19h 56m 25s.xml">
       <configuration name="StorageTest" configurationId="JUnit" />
     </history-entry>
@@ -751,9 +738,18 @@
     <history-entry file="StorageTest - 2019.06.07 at 20h 32m 42s.xml">
       <configuration name="StorageTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StorageTest - 2019.06.07 at 21h 06m 18s.xml">
+      <configuration name="StorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StorageTest - 2019.06.07 at 21h 13m 38s.xml">
+      <configuration name="StorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StorageTest - 2019.06.07 at 21h 16m 27s.xml">
+      <configuration name="StorageTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32726000" />
+    <option name="totallyTimeSpent" value="33357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -769,7 +765,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32615384" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43010753" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42703533" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -928,30 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/State.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="144" column="73" selection-start-line="144" selection-start-column="73" selection-end-line="144" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/example/cockounter/StorageTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#32#183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver/3.10.1/37f55d5ca021d347f431e617f4de61bc7defc291/mongodb-driver-3.10.1-sources.jar!/com/mongodb/MongoClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -966,10 +938,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="85" column="80" lean-forward="true" selection-start-line="85" selection-start-column="80" selection-end-line="85" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/example/cockounter/StorageTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#32#183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/classes/State.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2176">
+          <caret line="144" column="73" selection-start-line="144" selection-start-column="73" selection-end-line="144" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="24" column="81" selection-start-line="24" selection-start-column="81" selection-end-line="24" selection-end-column="81" />
+        <state relative-caret-position="91">
+          <caret line="48" column="88" selection-start-line="48" selection-start-column="88" selection-end-line="48" selection-end-column="88" />
           <folding>
             <element signature="e#32#410#0" expanded="true" />
           </folding>

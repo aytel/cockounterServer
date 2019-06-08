@@ -55,7 +55,8 @@ class Storage {
             query.criteria("uuid").equal(clientAddress.uuid),
             query.criteria("token").equal(clientAddress.token)
         )
-        datastore.delete(query.get())
+        val toDelete = query.get() ?: return
+        datastore.delete(toDelete)
     }
 
     fun getAllAdresses(uuid: UUID): MutableList<ClientAddress>? {

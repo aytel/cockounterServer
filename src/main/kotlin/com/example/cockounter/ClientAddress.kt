@@ -8,5 +8,6 @@ import java.util.*
 @Entity
 data class ClientAddress(
     @Indexed val uuid: UUID = UUID.randomUUID(),
-    @Indexed val token: String = ""
+    @Indexed val token: String = "",
+    @Id val shadowedUUId: UUID = UUID.randomUUID()
 )

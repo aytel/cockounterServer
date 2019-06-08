@@ -110,6 +110,7 @@ class HttpServer {
                             val version = state.version
                             val resultState = storage.update(version, uuid, state)
                             val resultJSON = StateCaptureConverter.gson.toJson(resultState)
+                            System.err.println("responding $resultJSON")
                             call.respond(resultJSON)
 
                             storage.getAllAdresses(uuid)?.forEach {
@@ -118,6 +119,9 @@ class HttpServer {
                                     .putData("state", resultJSON)
                                     .setToken(token)
                                     .build()
+
+                                System.err.println("sending $resultJSON to $token")
+
                                 instance!!.send(message)
                             }
 

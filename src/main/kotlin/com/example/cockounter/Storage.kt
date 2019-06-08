@@ -50,7 +50,12 @@ class Storage {
     }
 
     fun delete(clientAddress: ClientAddress) {
-        datastore.delete(clientAddress)
+        val query = datastore.createQuery(ClientAddress::class.java)
+        query.and(
+            query.criteria("uuid").equal(clientAddress.uuid),
+            query.criteria("token").equal(clientAddress.token)
+        )
+        datastore.delete(query.get())
     }
 
     fun getAllAdresses(uuid: UUID): MutableList<ClientAddress>? {

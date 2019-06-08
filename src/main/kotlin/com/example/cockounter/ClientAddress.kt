@@ -9,5 +9,5 @@ import java.util.*
 data class ClientAddress(
     @Indexed val uuid: UUID = UUID.randomUUID(),
     @Indexed val token: String = "",
-    @Id val shadowedUUId: UUID = UUID.randomUUID()
+    @Id val shadowedUUID: UUID = UUID.randomUUID()
 )

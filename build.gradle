@@ -1,6 +1,6 @@
 buildscript {
     dependencies {
-        classpath 'com.google.gms:google-services:3.0.0'
+        //classpath 'com.google.gms:google-services:4.2.0'
     }
 }
 
@@ -19,6 +19,7 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven { url "https://maven.google.com" }
 }
 
 dependencies {
@@ -41,7 +42,10 @@ dependencies {
     testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.4'
     testCompile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.5'
 
-    implementation 'com.google.firebase:firebase-admin:9.0.0'
+    /*compile 'com.google.android.gms:play-services:10.2.6'
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+    implementation 'com.google.firebase:firebase-messaging:18.0.0'*/
+    implementation 'com.google.firebase:firebase-admin:6.8.1'
 }
 
 compileKotlin {
@@ -59,4 +63,4 @@ jar {
     }
 }
 
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'

@@ -16,6 +16,12 @@ import io.ktor.server.netty.Netty
 import java.lang.Exception
 import java.lang.IllegalArgumentException
 import java.util.*
+import com.google.firebase.FirebaseApp
+import com.google.auth.oauth2.GoogleCredentials
+import com.google.firebase.FirebaseOptions
+import com.google.firebase.iid.FirebaseInstanceId
+import java.io.FileInputStream
+
 
 class HttpServer {
     companion object {
@@ -26,10 +32,20 @@ class HttpServer {
         private const val CHANGE_TOKEN = "/change"
 
         private val storage = Storage()
-        private val instance = FirebaseMessaging.getInstance()
+        private var instance: FirebaseMessaging? = null
 
         @JvmStatic
         fun main(args: Array<String>) {
+            val refreshToken = FileInputStream("./cockounter-firebase-adminsdk-qsry5-c4df205cb6.json")
+
+            val options = FirebaseOptions.Builder()
+                .setCredentials(GoogleCredentials.fromStream(refreshToken))
+                .setDatabaseUrl("https://cockounter.firebaseio.com/")
+                .build()
+            FirebaseApp.initializeApp(options)
+
+            instance = FirebaseMessaging.getInstance()
+
             System.err.println("Started!")
             embeddedServer(Netty, System.getenv("PORT").toInt()) {
                 routing {
@@ -102,7 +118,7 @@ class HttpServer {
                                     .putData("state", resultJSON)
                                     .setToken(token)
                                     .build()
-                                instance.send(message)
+                                instance!!.send(message)
                             }
 
                         } catch (e: Exception) {

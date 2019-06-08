@@ -1,1 +1,1 @@
-web: ./build/install/cockounterServer/bin/cockounterServer
+web: export GOOGLE_APPLICATION_CREDENTIALS="./ockounter-firebase-adminsdk-qsry5-c4df205cb6.json" && ./build/install/cockounterServer/bin/cockounterServer

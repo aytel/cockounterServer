@@ -36,4 +36,9 @@ internal class StorageTest {
         storage.update(capture.state.version, uuid, capture.state)
         assertEquals(prev + 1, storage.findStateCaptureByUUID(curUUID)!!.state.version)
     }
+
+    @Test
+    fun testMain() {
+        HttpServer.main(emptyArray())
+    }
 }

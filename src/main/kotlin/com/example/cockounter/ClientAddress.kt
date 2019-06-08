@@ -6,6 +6,6 @@ import java.util.*
 
 @Entity
 data class ClientAddress(
-    @Id val uuid: UUID,
-    val token: String
+    @Id val uuid: UUID = UUID.randomUUID(),
+    val token: String = ""
 )

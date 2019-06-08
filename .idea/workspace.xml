@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17ce15ab-8903-4498-82ca-d56790a8e328" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/ClientAddress.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/ClientAddress.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -52,11 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="123" column="37" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
+            <state relative-caret-position="634">
+              <caret line="114" column="43" selection-start-line="114" selection-start-column="43" selection-end-line="114" selection-end-column="43" />
               <folding>
                 <element signature="e#32#581#0" expanded="true" />
               </folding>
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/ClientAddress.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="153">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
               <folding>
                 <element signature="e#32#122#0" expanded="true" />
               </folding>
@@ -138,10 +138,10 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core/State.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core/Preset.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/example/cockounter/StorageTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/ClientAddress.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Storage.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/ClientAddress.kt" />
       </list>
     </option>
   </component>
@@ -245,7 +245,7 @@
     <property name="add_unversioned_files" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559960882765" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559961841220" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/core" />
@@ -358,28 +358,7 @@
       <workItem from="1559469319406" duration="716000" />
       <workItem from="1559562588472" duration="758000" />
       <workItem from="1559679481048" duration="1021000" />
-      <workItem from="1559844284393" duration="25946000" />
-    </task>
-    <task id="LOCAL-00031" summary="Deploy">
-      <created>1559863138597</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1559863138597</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Deploy">
-      <created>1559863236108</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1559863236108</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Deploy">
-      <created>1559863261235</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1559863261235</updated>
+      <workItem from="1559844284393" duration="26957000" />
     </task>
     <task id="LOCAL-00034" summary="Deploy">
       <created>1559863768906</created>
@@ -703,7 +682,28 @@
       <option name="project" value="LOCAL" />
       <updated>1559960420065</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Deploy">
+      <created>1559960845938</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1559960845938</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Deploy">
+      <created>1559960921138</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1559960921138</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Deploy">
+      <created>1559960936363</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1559960936363</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -739,7 +739,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47713000" />
+    <option name="totallyTimeSpent" value="48724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -981,22 +981,22 @@
     <entry file="file://$USER_HOME$/Downloads/cockounter-firebase-adminsdk-qsry5-c4df205cb6.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/ClientAddress.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="634">
+          <caret line="114" column="43" selection-start-line="114" selection-start-column="43" selection-end-line="114" selection-end-column="43" />
           <folding>
-            <element signature="e#32#122#0" expanded="true" />
+            <element signature="e#32#581#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/Server.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/cockounter/ClientAddress.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="123" column="37" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
+        <state relative-caret-position="153">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
-            <element signature="e#32#581#0" expanded="true" />
+            <element signature="e#32#122#0" expanded="true" />
           </folding>
         </state>
       </provider>

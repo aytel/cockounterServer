@@ -1,9 +1,10 @@
 package com.example.cockounter
 
 import com.example.cockounter.core.*
-import com.google.gson.JsonSyntaxException
-import io.ktor.application.Application
+import com.google.firebase.messaging.FirebaseMessaging
+import com.google.firebase.messaging.Message
 import io.ktor.application.call
+import io.ktor.http.ContentType
 import io.ktor.http.HttpStatusCode
 import io.ktor.request.receiveParameters
 import io.ktor.response.respond
@@ -22,6 +23,7 @@ class HttpServer {
         private const val UPDATE_GAME_STATE = "update_gs"
         private const val CONNECT_TO_SESSION = "connect/{uuid}"
         private const val GET_GAME_SESSION = "get/{uuid}"
+        private const val CHANGE_TOKEN = "/change"
 
         private val storage = Storage()
 
@@ -45,7 +47,7 @@ class HttpServer {
                             )
                             System.err.println("built")
                             storage.add(capture)
-                            assert(storage.findByUUID(capture.uuid) != null)
+                            assert(storage.findStateCaptureByUUID(capture.uuid) != null)
                             System.err.println("saved")
                             call.respond("true")
                         } catch (e: Exception) {
@@ -58,7 +60,7 @@ class HttpServer {
                         System.err.println("uuid = $uuidString")
                         try {
                             val uuid = UUID.fromString(uuidString)
-                            val capture = storage.findByUUID(uuid)
+                            val capture = storage.findStateCaptureByUUID(uuid)
                             if (capture != null) {
                                 call.respond(StateCaptureConverter.gson.toJson(capture))
                             } else {
@@ -73,7 +75,7 @@ class HttpServer {
                         val uuid = UUID.fromString(call.parameters["uuid"])
                         System.err.println("uuid = $uuid")
                         try {
-                            call.respond(StateCaptureConverter.gson.toJson(storage.findByUUID(uuid)!!.state))
+                            call.respond(StateCaptureConverter.gson.toJson(storage.findStateCaptureByUUID(uuid)!!.state))
                         } catch (e: Exception) {
                             System.err.println("Not found")
                             call.respond(HttpStatusCode.BadRequest)
@@ -89,10 +91,35 @@ class HttpServer {
                                 GameState::class.java
                             )!!
                             val version = state.version
-                            call.respond(StateCaptureConverter.gson.toJson(storage.update(version, uuid, state).second))
+                            val resultState = storage.update(version, uuid, state)
+                            val resultJSON = StateCaptureConverter.gson.toJson(resultState)
+                            call.respond(resultJSON)
+
+                            storage.getAllAdresses(uuid)?.forEach {
+                                val token = it.token
+                                val message = Message.builder()
+                                    .putData("state", resultJSON)
+                                    .setToken(token)
+                                    .build()
+                                FirebaseMessaging.getInstance().send(message)
+                            }
+
                         } catch (e: Exception) {
                             e.printStackTrace(System.err)
                         }
+                    }
+                    post(CHANGE_TOKEN) {
+                        val parameters = call.receiveParameters()
+                        val oldToken = parameters["old"]
+                        val newToken = parameters["new"]
+                        val uuid = UUID.fromString(parameters["uuid"])!!
+
+                        System.err.println("old = $oldToken, new = $newToken")
+
+                        if (oldToken != null)
+                            storage.delete(ClientAddress(uuid, oldToken))
+                        if (newToken != null)
+                            storage.add(ClientAddress(uuid, newToken))
                     }
                 }
             }.start(wait = true)

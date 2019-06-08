@@ -35,6 +35,7 @@ dependencies {
     testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.4'
     testCompile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.5'
 
+    implementation 'com.google.firebase:firebase-admin:6.8.1'
 }
 
 compileKotlin {

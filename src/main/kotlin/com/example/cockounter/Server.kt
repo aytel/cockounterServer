@@ -120,6 +120,8 @@ class HttpServer {
                             storage.delete(ClientAddress(uuid, oldToken))
                         if (newToken != null)
                             storage.add(ClientAddress(uuid, newToken))
+
+                        call.respond("true")
                     }
                 }
             }.start(wait = true)

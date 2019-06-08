@@ -169,7 +169,10 @@ data class BooleanParameter(
     override fun initialValueString(): String = initialValue.toString()
 }
 
-data class Library(val name: String, val script: String) : Serializable {
+data class Library(
+    val name: String = "",
+    val script: String = ""
+) : Serializable {
     companion object
 }
 

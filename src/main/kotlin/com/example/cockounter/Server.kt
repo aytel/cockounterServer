@@ -4,7 +4,6 @@ import com.example.cockounter.core.*
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.Message
 import io.ktor.application.call
-import io.ktor.http.ContentType
 import io.ktor.http.HttpStatusCode
 import io.ktor.request.receiveParameters
 import io.ktor.response.respond
@@ -19,7 +18,6 @@ import java.util.*
 import com.google.firebase.FirebaseApp
 import com.google.auth.oauth2.GoogleCredentials
 import com.google.firebase.FirebaseOptions
-import com.google.firebase.iid.FirebaseInstanceId
 import java.io.FileInputStream
 
 
@@ -50,10 +48,6 @@ class HttpServer {
             embeddedServer(Netty, System.getenv("PORT").toInt()) {
                 routing {
                     post(CREATE_SESSION) {
-                        System.err.printf("referrer = %s\n", call.request.headers["Referrer"])
-                        System.err.printf("referrer = %s\n", call.request.headers["Referer"])
-                        System.err.printf("referrer = %s\n", call.request.headers["referrer"])
-                        System.err.printf("referrer = %s\n", call.request.headers["referer"])
                         val parameters = call.receiveParameters()
                         val captureString = parameters["capture"]
                         System.err.println("capture = $captureString")
@@ -62,10 +56,8 @@ class HttpServer {
                                 captureString,
                                 StateCapture::class.java
                             )
-                            System.err.println("built")
                             storage.add(capture)
                             assert(storage.findStateCaptureByUUID(capture.uuid) != null)
-                            System.err.println("saved")
                             call.respond("true")
                         } catch (e: Exception) {
                             e.printStackTrace(System.err)

@@ -26,6 +26,7 @@ class HttpServer {
         private const val CHANGE_TOKEN = "/change"
 
         private val storage = Storage()
+        private val instance = FirebaseMessaging.getInstance()
 
         @JvmStatic
         fun main(args: Array<String>) {
@@ -101,7 +102,7 @@ class HttpServer {
                                     .putData("state", resultJSON)
                                     .setToken(token)
                                     .build()
-                                FirebaseMessaging.getInstance().send(message)
+                                instance.send(message)
                             }
 
                         } catch (e: Exception) {

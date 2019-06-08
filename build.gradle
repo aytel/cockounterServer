@@ -4,6 +4,8 @@ plugins {
     id 'application'
 }
 
+apply plugin: 'com.google.gms.google-services'
+
 mainClassName = 'com.example.cockounter.HttpServer'
 
 group 'aytel'
